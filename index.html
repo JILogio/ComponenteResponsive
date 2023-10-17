@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 50vh;
+            width: 100%;
+            padding-top: 200px;
+        }
+
+        .card {
+            padding: 50px;
+            width: 175px;
+            text-align: left;
+        }
+
+        .card:first-child {
+            background-color: rgb(226, 133, 37);
+            border-bottom-left-radius: 0.50rem;
+            border-top-left-radius: 0.50rem;
+        }
+
+        .card:nth-child(2) {
+            background-color: rgb(1, 105, 114);
+        }
+
+        .card:last-child {
+            background-color: rgb(0, 64, 63);
+            border-bottom-right-radius: 0.50rem;
+            border-top-right-radius: 0.50rem;
+        }
+
+        .card h3 {
+            font-family: 'Antonio', sans-serif;
+            font-size: xx-large;
+            color: whitesmoke;
+        }
+
+        .card p {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            padding-bottom: 70px;
+        }
+
+        .card a {
+            display: inline-block;
+            border: 2px solid;
+            padding: 10px;
+            width: 115px;
+            border-radius: 30px;
+            background-color: whitesmoke;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        /*RESPONSIVE*/
+        @media (max-width: 900px) {
+            .attribution {
+              text-align: end;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+            }
+
+            .container {
+                padding-top: 0%;
+                overflow-y: scroll;
+                height: 800px;
+            }
+
+            .card {
+                height: 35%;
+            }
+
+            .card p {
+                padding-bottom: 0%;
+            }
+
+            .card:first-child {
+                border-radius: 0%;
+                border-top-left-radius: 0.50rem;
+                border-top-right-radius: 0.50rem;
+            }
+
+            .card:last-child {
+                border-radius: 0%;
+                border-bottom-left-radius: 0.50rem;
+                border-bottom-right-radius: 0.50rem;
+            }
+        }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+        <img src="./images/icon-sedans.svg">
+        <h3>SEDANS</h3>
+        <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+        <a href="#" style="color: rgb(226, 133, 37);">Learn More</a>
+    </div>
+
+    <div class="card">
+        <img src="./images/icon-suvs.svg">
+        <h3>SUVS</h3>
+        <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
+        <a href="#" style="color: rgb(1, 105, 114);">Learn More</a>
+    </div>
+
+    <div class="card">
+        <img src="./images/icon-luxury.svg">
+        <h3>LUXURY</h3>
+        <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+        <a href="#" style="color: rgb(0, 64, 63);">Learn More</a>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ismael Ordoñez</a>.
+  </div>
+  
+</body>
+</html>
